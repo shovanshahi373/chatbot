@@ -1,4 +1,4 @@
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Route, HashRouter, Routes } from 'react-router-dom';
 import { BrowserRoutes } from '@/router';
 import { AuthComponent } from '@components/auth';
 import { GlobalProvider } from '@components/provider';
@@ -9,7 +9,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <GlobalProvider>
         <Routes>
           {BrowserRoutes.map(route => {
@@ -32,7 +32,7 @@ const App = () => {
           })}
         </Routes>
       </GlobalProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
