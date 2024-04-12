@@ -1,0 +1,39 @@
+@import url('./assets/css/tailwind.css');
+@import url('./assets/css/fonts.css');
+
+:root {
+  font-family: 'Manrope', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --purple: #6d31ed;
+  --red: #ff56a5;
+  --grey: #9095a1;
+  --blue: #15abff;
+  --black: #000000;
+  --text-grey: #363e64;
+  --background-grey: #dee1e6;
+  --alpha-grey: #171a1f12;
+  --light-blue: #f0f9ff;
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --topbar-height: 4rem;
+}
+
+::-webkit-scrollbar {
+  appearance: none;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-grey);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--off-white);
+}
