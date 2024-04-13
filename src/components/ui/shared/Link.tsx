@@ -1,16 +1,17 @@
 import { ReactNode } from 'react';
-
+import { Link } from 'react-router-dom';
 interface Props {
   to: string;
   children: ReactNode;
+  color?: 'secondary' | 'primary' | 'red' | 'black';
 }
 
-const Link = ({ children, to }: Props) => {
+const LinkComponent = ({ children, to, color = 'secondary' }: Props) => {
   return (
-    <a href={to} className="text-secondary">
-      {children}
-    </a>
+    <Link to={to}>
+      <span className={`text-${color}`}>{children}</span>
+    </Link>
   );
 };
 
-export default Link;
+export default LinkComponent;

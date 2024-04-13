@@ -5,6 +5,7 @@ import { IConversation } from '@/services/api/types';
 import { useChatContext, useCommonContext } from '@/hooks';
 import { useState } from 'react';
 
+import { Link } from '@components/ui/shared';
 interface Props {
   conversation: IConversation;
   active: boolean;
@@ -42,7 +43,9 @@ const Conversation = ({ conversation, active }: Props) => {
         className={`flex gap-3 hover:border-primary border-transparent-0 border-2 cursor-pointer justify-between items-center p-4 rounded-sm ${active ? 'bg-primary text-white' : isLandscape ? 'bg-light-blue' : 'bg-bg-dark'}`}
       >
         <span className={`truncate ${active ? 'pointer-events-none' : ''}`}>
-          <a href={`/conversations/${conversation.id}`}>{conversation.label}</a>
+          <Link to={`/conversations/${conversation.id}`} color="black">
+            {conversation.label}
+          </Link>
         </span>
         <span
           className={`${active ? 'text-white' : 'text-black'}`}
